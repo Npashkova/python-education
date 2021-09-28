@@ -16,7 +16,9 @@ class Engine:
 
 
 class Transport(Engine, ABC):
-    """Abstract class for transport methods"""
+    """Abstract class for transport methods
+    Attributes - int and str
+    """
 
     def __init__(self, max_speed, fuel_type, capacity):
         self.max_speed = max_speed
@@ -39,7 +41,7 @@ class Transport(Engine, ABC):
 
 
 class LandT(Transport):
-    """Child class: land transport"""
+    """Inherit all attributes from Transport"""
 
     def move(self):
         print('I can ride')
@@ -51,7 +53,7 @@ class LandT(Transport):
 
 
 class AirT(Transport):
-    """Child class: air transport"""
+    """Inherit all attributes from Transport"""
 
     def move(self):
         print('I can fly')
@@ -59,23 +61,24 @@ class AirT(Transport):
 
 
 class WaterT(Transport):
-    """Child class: water transport"""
+    """Inherit all attributes from Transport"""
 
     def move(self):
         print('I can sail')
-        return 'I am an effective method of transporting large quantities of goods'
+        super().move()
 
 
 class HumanPoweredT(Transport):
-    """Child class: human-powered transport"""
+    """Inherit all attributes from Transport"""
 
     def move(self):
         print('I can use your muscle-power :)')
-        return 'I am the most available of any mode of transport'
+        print('I am the most available of any mode of transport')
+        super().move()
 
 
 class RailT(LandT):
-    """Child class: rail transport"""
+    """Inherit all attributes from Transport"""
 
     @classmethod
     def surface_needed(cls):
@@ -84,7 +87,7 @@ class RailT(LandT):
 
 
 class RoadT(LandT):
-    """Child class: road transport"""
+    """Inherit all attributes from Transport"""
 
     @classmethod
     def surface_needed(cls):
@@ -93,7 +96,9 @@ class RoadT(LandT):
 
 
 class Car(RoadT):
-    """Child class: car"""
+    """Inherit all attributes from Transport
+    Additional arg - year of issue
+    """
 
     def __init__(self, max_speed, fuel_type, capacity, year_issue):
         super().__init__(max_speed, fuel_type, capacity)
@@ -121,19 +126,32 @@ class Car(RoadT):
             return True
 
 
+class Kayak(WaterT, HumanPoweredT):
+    """Inherit all attributes from
+    Water and Human powered transport
+    """
+    def move(self):
+        print('I am very nice choice for travelling')
+        print('The only problem is dependence on the weather.')
+        super().move()
+
+
 bmw = Car(375, 'petrol', 5, '2019')
 toyota = Car(250, 'petrol', 5, '2019')
 jeep = Car(100, 'petrol', 0, '2020')
-print(bmw.capacity)
-print(bmw.info())
-print(bmw.surface_needed())
-print(bmw.move())
-print(bmw.check_age())
-print(bmw == toyota)
-print(hash(bmw))
-print(hash(toyota))
-print(bool(bmw))
-print(bool(jeep))
-for x in jeep:
-    print(x)
-print('petro' in bmw)
+# print(bmw.capacity)
+# print(bmw.info())
+# print(bmw.surface_needed())
+# print(bmw.move())
+# print(bmw.check_age())
+# print(bmw == toyota)
+# print(hash(bmw))
+# print(hash(toyota))
+# print(bool(bmw))
+# print(bool(jeep))
+# for x in jeep:
+#     print(x)
+# print('petro' in bmw)
+kayak_1 = Kayak(20, 'muscle-energy', 3)
+print(Kayak.__mro__)
+kayak_1.move()
