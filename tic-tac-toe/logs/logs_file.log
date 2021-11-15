@@ -1,0 +1,24 @@
+
+2021-11-15 22:28:45,466 - __main__ - INFO - Human player Vladislav chooses X
+2021-11-15 22:28:45,466 - __main__ - INFO - Computer player Windows chooses O
+2021-11-15 22:28:45,466 - __main__ - INFO - The game board was created, current winner is None
+2021-11-15 22:29:05,918 - __main__ - INFO - The squares in the board got numbers.
+2021-11-15 22:29:18,571 - __main__ - INFO - Available moves are [0, 1, 2, 3, 4, 5, 6, 7, 8]
+2021-11-15 22:29:18,572 - __main__ - INFO - Vladislav makes a move with X to 4
+2021-11-15 22:29:18,572 - __main__ - INFO - The board was printed.
+2021-11-15 22:29:18,572 - __main__ - INFO - Available moves are [0, 1, 2, 3, 5, 6, 7, 8]
+2021-11-15 22:29:18,572 - __main__ - INFO - Computer Player Windows is choosing to put O to 7 square
+2021-11-15 22:29:18,573 - __main__ - INFO - Windows makes a move with O to 7
+2021-11-15 22:29:18,573 - __main__ - INFO - The board was printed.
+2021-11-15 22:29:24,914 - __main__ - INFO - Available moves are [0, 1, 2, 3, 5, 6, 8]
+2021-11-15 22:29:24,914 - __main__ - INFO - Vladislav makes a move with X to 8
+2021-11-15 22:29:24,915 - __main__ - INFO - The board was printed.
+2021-11-15 22:29:24,915 - __main__ - INFO - Available moves are [0, 1, 2, 3, 5, 6]
+2021-11-15 22:29:24,915 - __main__ - INFO - Computer Player Windows is choosing to put O to 5 square
+2021-11-15 22:29:24,915 - __main__ - INFO - Windows makes a move with O to 5
+2021-11-15 22:29:24,915 - __main__ - INFO - The board was printed.
+2021-11-15 22:29:31,895 - __main__ - INFO - Available moves are [0, 1, 2, 3, 6]
+2021-11-15 22:29:31,895 - __main__ - INFO - Vladislav makes a move with X to 0
+2021-11-15 22:29:31,895 - __main__ - INFO - The board was printed.
+2021-11-15 22:29:31,896 - __main__ - WARNING - Vladislav with X wins!
+2021-11-15 22:30:11,451 - __main__ - INFO - Thank you for playing, see you soon!
